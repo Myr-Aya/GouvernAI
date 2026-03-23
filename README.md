@@ -142,16 +142,6 @@ Edit `ACTIONS.md` to add new actions under the appropriate category with a base 
 
 Edit `TIERS.md` to modify when escalation triggers. For example, change the bulk threshold from 5 to 10, or add new escalation conditions.
 
-## Cost
-
-Based on measured data from the Claude Code plugin (Claude Sonnet 4.6, March 2026):
-
-| Metric | Value |
-|--------|-------|
-| Per gated action (recurring) | ~$0.005 |
-| Session setup (one-time cache) | ~$0.07 |
-| Tier 1 actions (60% of typical usage) | $0.000 |
-
 The skill adds ~2 extra messages per session compared to no guardrails.
 
 ## Relation to the Claude Code Plugin
@@ -159,7 +149,7 @@ The skill adds ~2 extra messages per session compared to no guardrails.
 This standalone skill is the **linguistic layer** extracted from the [GouvernAI Claude Code Plugin](https://github.com/Myr-Aya/GouvernAI-claude-code-plugin). The plugin adds:
 
 - **Deterministic hook enforcement** — a Python script that blocks obfuscated commands, credential transmission, and catastrophic system commands via PreToolUse hooks (exit code 2 = hard block)
-- **67 unit tests** covering hook patterns
+- **85 unit tests** covering hook patterns
 - **Plugin infrastructure** — plugin.json, hooks.json, marketplace install
 
 If you're using Claude Code, the plugin gives you both layers. If you're using any other agent platform, this skill gives you the linguistic layer — which handles the nuanced risk classification and approval workflow.
