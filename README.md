@@ -11,11 +11,8 @@ This is the **skill-only** version of [GouvernAI](https://github.com/Myr-Aya/Gou
 ## Install
 
 ```bash
-# From the Anthropic directory (once approved)
-/plugin install gouvernai-skill@claude-plugin-directory
-
-# Or add as a standalone marketplace
-claude plugin marketplace add Myr-Aya/gouvernai-skill
+# From marketplace
+claude plugin marketplace add Myr-Aya/GouvernAI-claude-code-plugin
 claude plugin install gouvernai-skill@mindxo
 ```
 
