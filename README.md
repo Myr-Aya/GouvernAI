@@ -11,12 +11,12 @@ This is the **skill-only** version of [GouvernAI](https://github.com/Myr-Aya/Gou
 ## Install
 
 ```bash
-# From the Anthropic directory
-/plugin install gouvernai-skill@claude-plugins-official
+# From the Anthropic directory (once approved)
+/plugin install gouvernai-skill@claude-plugin-directory
 
-# Or from the Myr-Aya marketplace
+# Or add as a standalone marketplace
 claude plugin marketplace add Myr-Aya/gouvernai-skill
-claude plugin install gouvernai-skill@Myr-Aya
+claude plugin install gouvernai-skill@mindxo
 ```
 
 Guardrails activate automatically on the next session. No configuration required.
@@ -126,7 +126,6 @@ Runtime files created in the project root:
 - `guardrails_log.md` — append-only audit log
 - `guardrails-mode.json` — persisted mode config
 
-
 ## Limitations
 
 - **No deterministic enforcement.** This is pure linguistic guardrails — Claude follows the instructions with judgment. If Claude skips or ignores the skill (e.g., on complex multi-step tasks), there is no programmatic backstop. For hard blocking, use the [full GouvernAI plugin](https://github.com/Myr-Aya/GouvernAI-claude-code-plugin) with hooks.
@@ -135,7 +134,7 @@ Runtime files created in the project root:
 
 ## Also available
 
-- **[GouvernAI Plugin](https://github.com/Myr-Aya/GouvernAI-claude-code-plugin)** — Full dual-enforcement version with PreToolUse hooks (deterministic blocking) + this skill (linguistic classification). 67 unit tests. For Claude Code users who want both layers.
+- **[GouvernAI Plugin](https://github.com/Myr-Aya/GouvernAI-claude-code-plugin)** — Full dual-enforcement version with PreToolUse hooks (deterministic blocking) + this skill (linguistic classification). 85 unit tests. For Claude Code users who want both layers.
 
 ## License
 
